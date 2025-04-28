@@ -1,76 +1,69 @@
 <template>
-    <div class="bg-white mt-10 mb-0">
-      <div class="container mx-auto px-4 py-12">
-        <div class="flex flex-col md:flex-row items-center gap-8">
-          <!-- Left Column - Image -->
-          <div 
-            class="w-full md:w-1/2"
-            v-motion
-            :initial="{ opacity: 0, x: -100 }"
-            :visible="{ opacity: 1, x: 0 }"
-            :delay="200"
-          >
-            <img 
-              src="/images/scholarship.jpg" 
-              alt="Scholarship" 
-              class="w-full h-auto rounded-lg shadow-lg"
-            />
+  <div class="bg-gray-50">
+    <div class="container mx-auto px-4 py-16">
+      <!-- Main Grid Layout -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Content -->
+        <div class="space-y-8"
+             v-motion
+             :initial="{ opacity: 0, x: -50 }"
+             :enter="{ opacity: 1, x: 0 }"
+             :delay="200">
+          <!-- Decorative Dots -->
+          <div class="flex gap-1 mb-4">
+            <div v-for="n in 9" :key="n" class="w-1 h-1 bg-orange-300 rounded-full"></div>
           </div>
-  
-          <!-- Right Column - Content -->
-          <div class="w-full md:w-1/2 space-y-6">
-            <h1 
-              class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight"
-              v-motion
-              :initial="{ opacity: 0, y: 20 }"
-              :visible="{ opacity: 1, y: 0 }"
-              :delay="400"
-            >
-              Seun Fakuade Scholarship Fund
-            </h1>
-            
-            <p 
-              class="text-gray-700 text-lg"
-              v-motion
-              :initial="{ opacity: 0, y: 20 }"
-              :visible="{ opacity: 1, y: 0 }"
-              :delay="600"
-            >
+
+          <div class="space-y-4 max-w-xl">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-star text-orange-400"></i>
+              <h1 class="text-4xl md:text-5xl font-bold text-gray-900">
+                Seun Fakuade Scholarship Fund
+              </h1>
+            </div>
+            <p class="text-gray-600 leading-relaxed text-xl">
               The 'Seun Fakuade Scholarship Fund will provide scholarships to deserving students, enabling them to pursue their higher education goals without the burden of financial constraints. In addition to financial assistance, the scholarship program will also include an active mentorship component to guide and inspire the recipients throughout their academic journey.
             </p>
-  
-            <NuxtLink to="/scholarship">
-            <button 
-              class="bg-gray-800 text-white px-6 py-3 mt-10 rounded-lg flex items-center gap-2 hover:bg-navy-800 transition-all duration-300 transform hover:scale-105"
-              v-motion
-              :initial="{ opacity: 0, y: 20 }"
-              :visible="{ opacity: 1, y: 0 }"
-              :delay="800"
-            >
+            <button class="px-8 py-3 bg-[#14B8A6] text-white rounded-lg hover:bg-orange-700 transition-all">
               Learn More
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-              </svg>
             </button>
-          </NuxtLink>
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="relative"
+             v-motion
+             :initial="{ opacity: 0, scale: 0.9 }"
+             :enter="{ opacity: 1, scale: 1 }"
+             :delay="400">
+          <!-- Image Grid -->
+          <div class="grid grid-cols-2 gap-6">
+            <!-- Top Image -->
+            <div class="relative bg-[#F3F4F6] p-4 rounded-[40px] shadow-lg">
+              <img 
+                src="/images/scholarship.jpg" 
+                alt="Student" 
+                class="w-full h-48 object-cover rounded-[30px]"
+              />
+              <div class="absolute -top-2 -right-2 w-8 h-8 bg-orange-600 rounded-full"></div>
+              <div class="absolute -bottom-2 -left-2 w-6 h-6 bg-orange-600 rounded-full"></div>
+            </div>
+            <!-- Bottom Image -->
+            <div class="relative bg-orange-600 p-4 rounded-[40px] mt-12">
+              <img 
+                src="/images/gallery2.jpg" 
+                alt="Student" 
+                class="w-full h-48 object-cover rounded-[30px]"
+              />
+              <div class="absolute -top-4 -left-4 w-10 h-10 bg-[#14B8A6] rounded-full"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </template>
-  
-  <style scoped>
-  .bg-navy-900 {
-    background-color: #1a2b4b;
-  }
-  .bg-navy-800:hover {
-    background-color: #233761;
-  }
-  .text-navy-900 {
-    color: #1a2b4b;
-  }
-  
-  [v-motion] {
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  </style>
+  </div>
+</template>
+
+<script setup>
+
+</script>

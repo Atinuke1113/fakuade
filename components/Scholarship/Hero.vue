@@ -28,7 +28,7 @@
               :initial="{ opacity: 0, y: 50 }"
               :visible="{ opacity: 1, y: 0 }">
               Empowering Future Leaders
-              <span class="block text-accent mt-2 mb-10">Through Education</span>
+              <span class="block text-orange-600 mt-2 mb-10">Through Education</span>
             </h1>
   
             <!-- Description -->
@@ -49,7 +49,7 @@
               :initial="{ opacity: 0, y: 20 }"
               :visible="{ opacity: 1, y: 0 }"
               :delay="600">
-              <button class="px-8 py-4 bg-accent text-white rounded-lg hover:bg-accent/90 transform hover:scale-105 transition-all duration-300">
+              <button class="px-8 py-4 bg-orange-600 text-white rounded-lg hover:bg-orange-800 transform hover:scale-105 transition-all duration-300">
                 Apply Now
               </button>
             </div>

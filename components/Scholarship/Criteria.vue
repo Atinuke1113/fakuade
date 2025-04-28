@@ -22,7 +22,7 @@
                  :delay="index * 100">
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <i :class="criterion.icon + ' text-accent text-xl'"></i>
+                  <i :class="criterion.icon + ' text-orange-600 text-xl'"></i>
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold mb-3 text-gray-900">{{ criterion.title }}</h3>
@@ -32,7 +32,7 @@
                     <li v-for="(req, idx) in criterion.requirements" 
                         :key="idx"
                         class="flex items-center gap-2 text-gray-600">
-                      <i class="fas fa-check-circle text-accent text-sm"></i>
+                      <i class="fas fa-check-circle text-orange-600 text-sm"></i>
                       <span>{{ req }}</span>
                     </li>
                   </ul>

@@ -1,103 +1,102 @@
 <template>
-    <div class="min-h-screen">
-      <!-- Hero Section -->
-      <section class="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20">
-        <!-- Animated Background Elements -->
-        <div class="absolute inset-0 overflow-hidden">
-          <div v-for="n in 3" :key="n" 
-               class="absolute rounded-full bg-accent/20 blur-3xl"
-               :style="`top: ${n * 30}%; left: ${n * 20}%; width: 40rem; height: 40rem;`"
+  <div class="min-h-screen bg-black/95">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+      <!-- Background Elements -->
+      <div class="absolute inset-0">
+        <div class="absolute top-0 right-0 w-1/3 h-screen bg-orange-600 transform skew-x-12"></div>
+        <img src="/images/gallery7.jpg" alt="stars" class="absolute w-full h-full object-cover opacity-10">
+      </div>
+
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid lg:grid-cols-2 gap-12 items-center relative">
+          <!-- Left Content -->
+          <div class="text-white space-y-8"
                v-motion
-               :initial="{ opacity: 0, scale: 0.5 }"
-               :visible="{ opacity: 0.6, scale: 1 }"
-               :delay="n * 200">
+               :initial="{ opacity: 0, x: -50 }"
+               :enter="{ opacity: 1, x: 0 }"
+               :delay="200">
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+              Hon. Commissioner
+              <span class="block text-orange-600">Seun Fakuade</span>
+            </h1>
+            <p class="text-lg text-gray-200">
+              I am Seun Fakuade, and I am excited to introduce myself to you.
+              I am a passionate individual with a drive for success in all aspects of my life. I am from Nigeria, Oye in Ekiti State precisely. I have a strong work ethic and a determination to achieve my goals.
+            </p>
+            <p class="text-lg text-gray-200">
+              Throughout my career, I have gained valuable experience in various industries, from various great mentors like Mallam Nasir El Rufai and Dr. John Kayode Fayemi.
+            </p>
+            <p class="text-lg text-gray-200">
+              I am excited about the opportunity to connect with like-minded individuals who share a passion for personal growth and professional development. I believe that through collaboration and continuous learning, we can achieve great things together.
+            </p>
+            <button class="px-8 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-500 transition-all">
+              Learn More
+            </button>
+          </div>
+
+          <!-- Right Content - Image -->
+          <div class="relative"
+               v-motion
+               :initial="{ opacity: 0, scale: 0.9 }"
+               :enter="{ opacity: 1, scale: 1 }"
+               :delay="400">
+            <img 
+              src="/images/seun.jpg" 
+              alt="Political Leader" 
+              class="w-full h-[600px] object-cover rounded-lg"
+            />
           </div>
         </div>
-  
-        <div class="container mx-auto px-4 relative">
-          <!-- Profile Section -->
-          <div class="flex flex-col md:flex-row items-center gap-12 mb-16">
-            <!-- Profile Image -->
-            <div class="w-full md:w-1/3"
-                 v-motion
-                 :initial="{ opacity: 0, x: -50 }"
-                 :visible="{ opacity: 1, x: 0 }">
-              <img 
-                src="/images/seun.jpg" 
-                alt="Seun Fakuade" 
-                class="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
-              />
-            </div>
-  
-            <!-- Introduction -->
-            <div class="w-full md:w-2/3 space-y-6">
-              <h1 
-                class="text-4xl md:text-5xl font-bold"
-                v-motion
-                :initial="{ opacity: 0, y: 20 }"
-                :visible="{ opacity: 1, y: 0 }">
-                I am Seun Fakuade
-              </h1>
-              
-              <p 
-                class="text-xl text-gray-300"
-                v-motion
-                :initial="{ opacity: 0, y: 20 }"
-                :visible="{ opacity: 1, y: 0 }"
-                :delay="200">
-                A passionate individual with a drive for success in all aspects of my life.
-              </p>
-            </div>
+
+        <!-- Bottom Cards -->
+        <div class="grid md:grid-cols-3 gap-6 mt-12">
+          <!-- Educational Background Card -->
+          <div class="bg-blue-900/50 backdrop-blur-sm p-6 rounded-lg"
+               v-motion
+               :initial="{ opacity: 0, y: 50 }"
+               :enter="{ opacity: 1, y: 0 }"
+               :delay="600">
+            <h3 class="text-white text-xl mb-2 font-bold">Educational Background</h3>
+            <p class="text-lg text-gray-200">
+              I have a diverse educational background, with a Bachelor's degree in Microbiology and a Master's degree in Public Administration from the prestigious Lee Kuan Yew School of Public Policy.
+            </p>
           </div>
-  
-          <!-- Biography Sections -->
-          <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div v-for="(section, index) in sections" 
-                 :key="index"
-                 class="bg-white/10 backdrop-blur-lg rounded-xl p-6"
-                 v-motion
-                 :initial="{ opacity: 0, y: 20 }"
-                 :visible="{ opacity: 1, y: 0 }"
-                 :delay="index * 100">
-              <h3 class="text-xl font-semibold mb-4">{{ section.title }}</h3>
-              <p class="text-gray-300">{{ section.content }}</p>
-            </div>
+
+          <!-- Personal Experience Card -->
+          <div class="bg-orange-600 backdrop-blur-sm p-6 rounded-lg"
+               v-motion
+               :initial="{ opacity: 0, y: 50 }"
+               :enter="{ opacity: 1, y: 0 }"
+               :delay="800">
+            <h3 class="text-white text-xl mb-4 font-bold">Personal Experience</h3>
+           <p class="text-lg text-gray-200">
+            Throughout my career, I have gained valuable experience in various industries, learning from great mentors like Mallam Nasir El Rufai and Dr. John Kayode Fayemi.
+           </p>
+          </div>
+
+          <!-- Newsletter Card -->
+          <div class="bg-white p-6 rounded-lg"
+               v-motion
+               :initial="{ opacity: 0, y: 50 }"
+               :enter="{ opacity: 1, y: 0 }"
+               :delay="1000">
+            <h3 class="text-black text-xl mb-2 font-bold">Personal Interests</h3>
+           <p class="text-lg text-black">
+            In my free time, I enjoy traveling, exploring new cultures, and engaging in adventurous activities. These experiences have taught me the value of embracing new challenges.
+           </p>
           </div>
         </div>
-      </section>
-    </div>
-  </template>
-  
-  <script setup>
-  const sections = [
-    {
-      title: "Educational Background",
-      content: "I have a diverse educational background, with a Bachelor's degree in Microbiology and a Master's degree in Public Administration from the prestigious Lee Kuan Yew School of Public Policy."
-    },
-    {
-      title: "Professional Experience",
-      content: "Throughout my career, I have gained valuable experience in various industries, learning from great mentors like Mallam Nasir El Rufai and Dr. John Kayode Fayemi."
-    },
-    {
-      title: "Leadership",
-      content: "I am a natural leader, with the ability to motivate and inspire those around me to strive for excellence. I believe in fostering a positive work environment where collaboration and teamwork are valued."
-    },
-    {
-      title: "Personal Interests",
-      content: "In my free time, I enjoy traveling, exploring new cultures, and engaging in adventurous activities. These experiences have taught me the value of embracing new challenges."
-    }
-  ]
-  </script>
-  
-  <style scoped>
-  .bg-gradient-to-br {
-    background-size: 200% 200%;
-    animation: gradientAnimation 15s ease infinite;
-  }
-  
-  @keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  </style>
+      </div>
+    </section>
+  </div>
+</template>
+
+<style scoped>
+.bg-stars {
+  background-image: url('/images/stars.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+}
+</style>

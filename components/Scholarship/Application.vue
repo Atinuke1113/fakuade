@@ -86,7 +86,7 @@
       v-model="form.purpose"
       rows="8"
       required
-      class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
+      class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"
       placeholder="Share your story and aspirations..."
     ></textarea>
     
@@ -125,7 +125,7 @@
                  :initial="{ opacity: 0, y: 20 }"
                  :visible="{ opacity: 1, y: 0 }">
               <button type="submit" 
-                      class="w-full bg-accent text-white py-3 rounded-lg hover:bg-accent/90 transition-colors">
+                      class="w-full bg-orange-600 text-white py-3 rounded-lg hover:bg-orange-800 transition-colors">
                 Submit Application
               </button>
             </div>

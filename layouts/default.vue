@@ -6,7 +6,7 @@
   <div class="flex items-center justify-between h-16 sm:h-20">
     <!-- Logo -->
     <NuxtLink to="/" class="flex items-center space-x-2">
-     <h4 class="h-16 xs:h-18 w-auto text-accent text-xl mt-10">SEUN FAKUADE</h4>
+     <h4 class="h-16 xs:h-18 w-auto font-bold text-orange-600 text-xl mt-10">SEUN FAKUADE</h4>
     </NuxtLink>
 
     <!-- Desktop Navigation -->
@@ -14,8 +14,8 @@
       <NuxtLink v-for="item in navItems" 
                 :key="item.path"
                 :to="item.path"
-                class="px-3 lg:px-4 py-2 text-xl lg:text-base text-white hover:text-accent rounded-lg transition-colors"
-                :class="{ 'text-accent bg-accent/8': isCurrentPath(item.path) }">
+                class="px-3 lg:px-4 py-2 text-xl lg:text-base text-white hover:text-orange-600 rounded-lg transition-colors"
+                :class="{ 'text-orange-600 bg-accent/8': isCurrentPath(item.path) }">
         {{ item.name }}
       </NuxtLink>
     </div>
@@ -47,8 +47,8 @@
         <NuxtLink v-for="item in navItems" 
                   :key="item.path"
                   :to="item.path"
-                  class="block px-4 py-3 text-base text-gray-600 hover:text-accent hover:bg-gray-50 rounded-lg transition-colors"
-                  :class="{ 'text-accent bg-accent/5': isCurrentPath(item.path) }"
+                  class="block px-4 py-3 text-base text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-lg transition-colors"
+                  :class="{ 'text-orange-600 bg-accent/5': isCurrentPath(item.path) }"
                   @click="closeMenu">
           {{ item.name }}
         </NuxtLink>
@@ -72,7 +72,7 @@
         <!-- Logo and Navigation -->
         <div class="flex flex-col md:flex-row justify-between items-center mb-8">
           <!-- Logo -->
-          <NuxtLink to="/" class="text-2xl font-bold text-accent mb-6 md:mb-0">
+          <NuxtLink to="/" class="text-2xl font-bold text-orange-600 mb-6 md:mb-0">
             SEUN FAKUADE
           </NuxtLink>
 
@@ -81,7 +81,7 @@
             <NuxtLink v-for="item in navItems" 
                       :key="item.path"
                       :to="item.path"
-                      class="hover:text-accent transition-colors">
+                      class="hover:text-orange-600 transition-colors">
               {{ item.name }}
             </NuxtLink>
           </div>
@@ -90,16 +90,16 @@
         <!-- Social Links and Copyright -->
         <div class="flex flex-col items-center mt-12 pt-8 border-t border-gray-700">
           <div class="flex space-x-6 mb-6">
-            <a href="https://twitter.com" target="_blank" class="text-white hover:text-accent transition-colors">
+            <a href="https://twitter.com" target="_blank" class="text-white hover:text-orange-600 transition-colors">
               <i class="fab fa-twitter text-2xl"></i>
             </a>
-            <a href="https://facebook.com" target="_blank" class="text-white hover:text-accent transition-colors">
+            <a href="https://facebook.com" target="_blank" class="text-white hover:text-orange-600 transition-colors">
               <i class="fab fa-facebook text-2xl"></i>
             </a>
-            <a href="https://instagram.com" target="_blank" class="text-white hover:text-accent transition-colors">
+            <a href="https://instagram.com" target="_blank" class="text-white hover:text-orange-600 transition-colors">
               <i class="fab fa-instagram text-2xl"></i>
             </a>
-            <a href="https://github.com" target="_blank" class="text-white hover:text-accent transition-colors">
+            <a href="https://github.com" target="_blank" class="text-white hover:text-orange-600 transition-colors">
               <i class="fab fa-github text-2xl"></i>
             </a>
           </div>

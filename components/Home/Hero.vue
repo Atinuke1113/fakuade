@@ -27,7 +27,7 @@
           <!-- Video Control Button -->
           <button 
             @click="toggleVideo"
-            class="bg-white text-black px-6 py-2 rounded-full mt-60 flex items-center space-x-2 hover:bg-gray-200 transition-colors"
+            class="bg-[#F3F4F6] text-black px-6 py-2 rounded-full mt-60 flex items-center space-x-2 hover:bg-gray-200 transition-colors"
           >
             <span v-if="isPlaying">Pause Video</span>
             <span v-else>Play Video</span>

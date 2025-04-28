@@ -1,7 +1,7 @@
 <template>
     <section class="py-10 md:mt-20 mt-10 bg-gradient-to-br from-gray-100 to-gray-100">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 text-accent">Photo Gallery</h2>
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Photo Gallery</h2>
         
         <!-- Gallery Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -34,7 +34,7 @@
         <div class="text-center mt-8" v-if="images.length > itemsToShow">
           <button 
             @click="loadMore" 
-            class="px-6 py-2 bg-accent text-white rounded-lg hover:bg-gray-700 hover:text-accent transition-colors"
+            class="px-6 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-800 transition-colors"
           >
             Load More
           </button>

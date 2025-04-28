@@ -1,10 +1,11 @@
 <template>
   <div class="w-full">
     <HomeHero></HomeHero>
-    <HomeApply></HomeApply>
+    <HomeBanner></HomeBanner>
     <HomeScholarship></HomeScholarship>
     <HomeGallery></HomeGallery>
     <HomeFaq></HomeFaq>
+    <HomeApply></HomeApply>
     
     
     
