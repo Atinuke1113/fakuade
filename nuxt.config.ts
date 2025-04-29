@@ -27,6 +27,10 @@ export default defineNuxtConfig({
           crossorigin: 'anonymous'
         }
       ]
+    },
+    pageTransition: {
+      name: 'page',
+      mode: 'out-in'
     }
   },
 

@@ -29,7 +29,7 @@
                 <div class="space-y-6">
                   <div class="flex items-start gap-4">
                     <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                      <i class="fas fa-map-marker-alt text-accent text-xl"></i>
+                      <i class="fas fa-map-marker-alt text-orange-600 text-xl"></i>
                     </div>
                     <div>
                       <h3 class="font-semibold text-lg">Address</h3>
@@ -39,7 +39,7 @@
   
                   <div class="flex items-start gap-4">
                     <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                      <i class="fas fa-phone text-accent text-xl"></i>
+                      <i class="fas fa-phone text-orange-600 text-xl"></i>
                     </div>
                     <div>
                       <h3 class="font-semibold text-lg">Phone</h3>
@@ -49,7 +49,7 @@
   
                   <div class="flex items-start gap-4">
                     <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                      <i class="fas fa-envelope text-accent text-xl"></i>
+                      <i class="fas fa-envelope text-orange-600 text-xl"></i>
                     </div>
                     <div>
                       <h3 class="font-semibold text-lg">Email</h3>
@@ -62,13 +62,13 @@
                 <div class="mt-12">
                   <h3 class="font-semibold text-lg mb-4">Follow Us</h3>
                   <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center hover:bg-accent hover:text-white transition-colors">
+                    <a href="#" class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center hover:bg-orange-600 hover:text-white transition-colors">
                       <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center hover:bg-accent hover:text-white transition-colors">
+                    <a href="#" class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center hover:bg-orange-600 hover:text-white transition-colors">
                       <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center hover:bg-accent hover:text-white transition-colors">
+                    <a href="#" class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center hover:bg-orange-600 hover:text-white transition-colors">
                       <i class="fab fa-instagram"></i>
                     </a>
                   </div>
@@ -86,29 +86,29 @@
                   <div>
                     <label class="block text-gray-700 mb-2">Full Name *</label>
                     <input type="text" v-model="form.name" required
-                           class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
+                           class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
                   </div>
   
                   <div>
                     <label class="block text-gray-700 mb-2">Email Address *</label>
                     <input type="email" v-model="form.email" required
-                           class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
+                           class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
                   </div>
   
                   <div>
                     <label class="block text-gray-700 mb-2">Subject *</label>
                     <input type="text" v-model="form.subject" required
-                           class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
+                           class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
                   </div>
   
                   <div>
                     <label class="block text-gray-700 mb-2">Message *</label>
                     <textarea v-model="form.message" rows="6" required
-                             class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"></textarea>
+                             class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"></textarea>
                   </div>
   
                   <button type="submit" 
-                          class="w-full bg-accent text-white py-3 rounded-lg hover:bg-accent/90 transition-colors">
+                          class="w-full bg-orange-600 text-white py-3 rounded-lg hover:bg-orange-700 transition-colors">
                     Send Message
                   </button>
                 </form>

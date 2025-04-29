@@ -2,9 +2,16 @@
   <div class="w-full">
     <HomeHero></HomeHero>
     <HomeBanner></HomeBanner>
+    <HomeCta></HomeCta>
+    <AboutVision></AboutVision>
+    <HomeQuotewall></HomeQuotewall>
     <HomeScholarship></HomeScholarship>
-    <HomeGallery></HomeGallery>
-    <HomeFaq></HomeFaq>
+    <HomeEvents></HomeEvents>
+    
+   
+    
+   
+    
     <HomeApply></HomeApply>
     
     

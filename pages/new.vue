@@ -21,7 +21,7 @@
                   <img src="/images/gallery3.jpg" alt="Featured Post" class="absolute inset-0 w-full h-full object-cover">
                 </div>
                 <div class="p-8 flex flex-col justify-center">
-                  <span class="text-accent font-semibold mb-4">Featured Post</span>
+                  <span class="text-orange-600 font-semibold mb-4">Featured Post</span>
                   <h2 class="text-3xl font-bold mb-4">Defining a Pathway For Our Democracy</h2>
                   <p class="text-gray-600 mb-6">The ideological differences of the two leading parties in the 2019 general elections was subtle yet clear. Many Nigerians, including myself, have long bemoaned the lack of a clear definition of ideology as observed in more matured democracies abroad (the lefts, rights, middle Centre: liberal, conservative, and the now-pronounced socialist democrats – thanks to Bernie Sanders).</p>
                   <div class="flex items-center gap-4 mb-6">
@@ -31,7 +31,7 @@
                       <p class="text-sm text-gray-500">February 02, 2019 · 5 min read</p>
                     </div>
                   </div>
-                  <button class="self-start px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors">
+                  <button class="self-start px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-accent/90 transition-colors">
                     Read More
                   </button>
                 </div>
@@ -53,7 +53,7 @@
               <button 
                 v-for="category in categories" 
                 :key="category"
-                class="px-6 py-2 rounded-full border border-gray-300 hover:border-accent hover:text-accent transition-colors">
+                class="px-6 py-2 rounded-full border border-gray-300 hover:border-orange-600 hover:text-orange-600 transition-colors">
                 {{ category }}
               </button>
             </div>
@@ -71,7 +71,7 @@
                   <img :src="post.image" :alt="post.title" class="absolute inset-0 w-full h-full object-cover">
                 </div>
                 <div class="p-6">
-                  <span class="text-accent text-sm font-semibold">{{ post.category }}</span>
+                  <span class="text-orange-600 text-sm font-semibold">{{ post.category }}</span>
                   <h3 class="text-xl font-bold mt-2 mb-3">{{ post.title }}</h3>
                   <p class="text-gray-600 mb-4">{{ post.excerpt }}</p>
                   <div class="flex items-center justify-between">
@@ -90,7 +90,7 @@
                  v-motion
                  :initial="{ opacity: 0, y: 20 }"
                  :visible="{ opacity: 1, y: 0 }">
-              <button class="px-8 py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors">
+              <button class="px-8 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors">
                 Load More Posts
               </button>
             </div>

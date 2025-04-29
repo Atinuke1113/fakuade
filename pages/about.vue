@@ -1,7 +1,12 @@
 <template>
   <div class="w-full">
-    <AboutHero></AboutHero>
+    <HomeCoverage></HomeCoverage>
     <AboutMission></AboutMission>
+    <HomeSnapshot></HomeSnapshot>
+    <AboutStories></AboutStories>
+    <HomeGallery></HomeGallery>
+    <AboutFuture></AboutFuture>
+    
     
   </div>
 </template>

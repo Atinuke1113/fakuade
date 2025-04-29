@@ -6,7 +6,11 @@
   <div class="flex items-center justify-between h-16 sm:h-20">
     <!-- Logo -->
     <NuxtLink to="/" class="flex items-center space-x-2">
-     <h4 class="h-16 xs:h-18 w-auto font-bold text-orange-600 text-xl mt-10">SEUN FAKUADE</h4>
+      <img 
+                src="/images/logo2.png" 
+                alt="logo" 
+                class="w-24 h-16"
+              />
     </NuxtLink>
 
     <!-- Desktop Navigation -->
@@ -14,7 +18,7 @@
       <NuxtLink v-for="item in navItems" 
                 :key="item.path"
                 :to="item.path"
-                class="px-3 lg:px-4 py-2 text-xl lg:text-base text-white hover:text-orange-600 rounded-lg transition-colors"
+                class="px-3 lg:px-4 py-2 text-xs lg:text-base text-white hover:text-orange-600 rounded-lg transition-colors"
                 :class="{ 'text-orange-600 bg-accent/8': isCurrentPath(item.path) }">
         {{ item.name }}
       </NuxtLink>
@@ -72,9 +76,13 @@
         <!-- Logo and Navigation -->
         <div class="flex flex-col md:flex-row justify-between items-center mb-8">
           <!-- Logo -->
-          <NuxtLink to="/" class="text-2xl font-bold text-orange-600 mb-6 md:mb-0">
-            SEUN FAKUADE
-          </NuxtLink>
+          <NuxtLink to="/" class="flex items-center space-x-2">
+             <img 
+                src="/images/logo2.png" 
+                alt="logo" 
+                class="w-36 h-24"
+              />
+    </NuxtLink>
 
           <!-- Navigation Links -->
           <div class="flex flex-wrap justify-center gap-6">
