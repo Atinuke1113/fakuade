@@ -1,8 +1,8 @@
 <template>
-  <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+  <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden items-center">
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="grid md:grid-cols-2 gap-28 items-center">
           <!-- Image Section -->
           <div class="relative"
                v-motion
@@ -12,7 +12,7 @@
               <img 
                 src="/images/gallery6.jpg" 
                 alt="Seun Fakuade"
-                class="w-full h-[500px] object-cover"
+                class="w-full h-[500px] sm:h-[300px] object-cover"
               >
             </div>
             <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-gradient-to-br from-[#F97316] to-[#14B8A6] rounded-2xl -z-10"></div>

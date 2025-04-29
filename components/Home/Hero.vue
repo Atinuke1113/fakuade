@@ -1,7 +1,7 @@
 <template>
-  <section class="relative h-screen bg-black overflow-hidden">
+  <section class="py-20 relative h-screen bg-black overflow-hidden">
     <!-- Background Video -->
-    <div class="absolute inset-0 opacity-50">
+    <div class="absolute inset-0 opacity-70">
       <video 
         class="w-full h-full object-cover"
         autoplay 

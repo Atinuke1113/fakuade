@@ -3,15 +3,10 @@
     <HomeHero></HomeHero>
     <HomeBanner></HomeBanner>
     <HomeCta></HomeCta>
-    <AboutVision></AboutVision>
+    <HomeVision></HomeVision>
     <HomeQuotewall></HomeQuotewall>
     <HomeScholarship></HomeScholarship>
     <HomeEvents></HomeEvents>
-    
-   
-    
-   
-    
     <HomeApply></HomeApply>
     
     

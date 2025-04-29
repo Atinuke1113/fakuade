@@ -1,5 +1,5 @@
 <template>
-    <section class="py-20 h-[350px] mt-10 bg-gradient-to-br from-[#F97316]/5 to-[#14B8A6]/80">
+    <section class="py-20 h-[400px] mt-10 bg-gradient-to-br from-[#F97316]/5 to-[#14B8A6]/80">
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center relative overflow-hidden min-h-[300px]">
           <TransitionGroup

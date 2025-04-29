@@ -10,7 +10,7 @@
       <div class="container mx-auto px-4 relative">
         <!-- Section Header -->
         <div class="max-w-xl mx-auto text-center mb-20">
-          <h2 class="text-6xl font-bold bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent mb-6"
+          <h2 class="text-5xl font-bold bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent mb-6"
               v-motion
               :initial="{ opacity: 0, y: 20 }"
               :visible="{ opacity: 1, y: 0 }">
@@ -32,9 +32,9 @@
                  v-motion
                  :initial="{ opacity: 0, x: -50 }"
                  :visible="{ opacity: 1, x: 0 }">
-              <div class="flex items-center gap-8 p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-500 border border-white/10">
+              <div class="flex-col lg:flex md:flex items-center gap-8 p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-500 border border-white/10">
                 <!-- Date Box -->
-                <div class="flex-shrink-0 w-32 h-32 bg-gradient-to-br from-[#F97316] to-[#14B8A6] rounded-lg p-[1px]">
+                <div class="flex-shrink-0 w-24 h-24 mb-5 bg-gradient-to-br from-[#F97316] to-[#14B8A6] rounded-lg p-[1px]">
                   <div class="w-full h-full bg-black rounded-lg flex flex-col items-center justify-center">
                     <span class="text-4xl font-bold text-white">25</span>
                     <span class="text-sm text-gray-400">DEC 2023</span>
@@ -59,7 +59,7 @@
   
                 <!-- Action Button -->
                 <div class="flex-shrink-0">
-                  <button class="px-6 py-3 bg-white/10 hover:bg-white/20 rounded-full text-white transition-all duration-300 group-hover:scale-105">
+                  <button class="px-6 py-3 mt-4 bg-white/10 hover:bg-white/20 rounded-full text-white transition-all duration-300 group-hover:scale-105">
                     Register Now
                   </button>
                 </div>
@@ -71,8 +71,8 @@
                  v-motion
                  :initial="{ opacity: 0, x: -50 }"
                  :visible="{ opacity: 1, x: 0, delay: 200 }">
-              <div class="flex items-center gap-8 p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-500 border border-white/10">
-                <div class="flex-shrink-0 w-32 h-32 bg-gradient-to-br from-[#14B8A6] to-[#F97316] rounded-lg p-[1px]">
+              <div class="flex-col lg:flex md:flex items-center gap-8 p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-500 border border-white/10">
+                <div class="flex-shrink-0 w-24 h-24 mb-5 bg-gradient-to-br from-[#14B8A6] to-[#F97316] rounded-lg p-[1px]">
                   <div class="w-full h-full bg-black rounded-lg flex flex-col items-center justify-center">
                     <span class="text-4xl font-bold text-white">15</span>
                     <span class="text-sm text-gray-400">JAN 2024</span>
@@ -95,7 +95,7 @@
                 </div>
   
                 <div class="flex-shrink-0">
-                  <button class="px-6 py-3 bg-white/10 hover:bg-white/20 rounded-full text-white transition-all duration-300 group-hover:scale-105">
+                  <button class="px-6 py-3 mt-4 bg-white/10 hover:bg-white/20 rounded-full text-white transition-all duration-300 group-hover:scale-105">
                     Join Workshop
                   </button>
                 </div>

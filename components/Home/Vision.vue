@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-6xl mx-auto p-8 mt-5">
+    <div class="max-w-6xl mx-auto p-8 mt-5 overflow-hidden">
       <!-- Header -->
       <div class="flex items-center gap-8 mb-20"
          v-motion
@@ -7,10 +7,10 @@
          :visible="{ opacity: 1, x: 0 }"
          :delay="300">
         <!-- Color Bars -->
-        <div class="space-y-3">
-          <div class="h-6 w-40 bg-[#F97316] rounded-r-full"></div>
-          <div class="h-6 w-32 bg-[#14B8A6] rounded-r-full"></div>
-          <div class="h-6 w-36 bg-gradient-to-r from-[#F97316] to-[#14B8A6] rounded-r-full"></div>
+        <div class="space-y-2">
+          <div class="h-4 w-20 sm:h-4 sm:w-16 bg-[#F97316] rounded-r-full"></div>
+          <div class="h-4 w-12 bg-[#14B8A6] rounded-r-full"></div>
+          <div class="h-4 w-16 bg-gradient-to-r from-[#F97316] to-[#14B8A6] rounded-r-full"></div>
         </div>
         
         <div class="space-y-2">
@@ -31,7 +31,7 @@
            :visible="{ opacity: 1, x: 0 }"
            :delay="300"
            :threshold="0.3">
-          <div class="w-16 h-16 bg-[#F97316] rounded-lg flex items-center justify-center flex-shrink-0">
+          <div class="w-10 h-10 bg-[#F97316] rounded-lg flex items-center justify-center flex-shrink-0">
             <i class="fas fa-eye text-white text-2xl"></i>
           </div>
           <div class="bg-white shadow-xl rounded-lg p-6 flex-grow">
@@ -49,7 +49,7 @@
            :visible="{ opacity: 1, x: 0 }"
            :delay="300"
            :threshold="0.3">
-          <div class="w-16 h-16 bg-[#14B8A6] rounded-lg flex items-center justify-center flex-shrink-0">
+          <div class="w-10 h-10 bg-[#14B8A6] rounded-lg flex items-center justify-center flex-shrink-0">
             <i class="fas fa-flag text-white text-2xl"></i>
           </div>
           <div class="bg-white shadow-xl rounded-lg p-6 flex-grow">
@@ -67,7 +67,7 @@
            :visible="{ opacity: 1, x: 0 }"
            :delay="300"
            :threshold="0.3">
-          <div class="w-16 h-16 bg-gradient-to-r from-[#F97316] to-[#14B8A6] rounded-lg flex items-center justify-center flex-shrink-0">
+          <div class="w-10 h-10 bg-gradient-to-r from-[#F97316] to-[#14B8A6] rounded-lg flex items-center justify-center flex-shrink-0">
             <i class="fas fa-bullseye text-white text-2xl"></i>
           </div>
           <div class="bg-white shadow-xl rounded-lg p-6 flex-grow">

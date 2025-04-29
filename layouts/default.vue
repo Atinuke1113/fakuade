@@ -9,7 +9,7 @@
       <img 
                 src="/images/logo2.png" 
                 alt="logo" 
-                class="w-24 h-16"
+                class="w-24 h-12"
               />
     </NuxtLink>
 
@@ -19,7 +19,7 @@
                 :key="item.path"
                 :to="item.path"
                 class="px-3 lg:px-4 py-2 text-xs lg:text-base text-white hover:text-orange-600 rounded-lg transition-colors"
-                :class="{ 'text-orange-600 bg-accent/8': isCurrentPath(item.path) }">
+                :class="{ 'text-orange-600 bg-accent/12': isCurrentPath(item.path) }">
         {{ item.name }}
       </NuxtLink>
     </div>
@@ -51,7 +51,7 @@
         <NuxtLink v-for="item in navItems" 
                   :key="item.path"
                   :to="item.path"
-                  class="block px-4 py-3 text-base text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-lg transition-colors"
+                  class="block px-4 py-3 text-base text-gray-400 hover:text-orange-600 hover:bg-gray-50 rounded-lg transition-colors"
                   :class="{ 'text-orange-600 bg-accent/5': isCurrentPath(item.path) }"
                   @click="closeMenu">
           {{ item.name }}
@@ -80,7 +80,7 @@
              <img 
                 src="/images/logo2.png" 
                 alt="logo" 
-                class="w-36 h-24"
+                class="w-36 h-24 py-4"
               />
     </NuxtLink>
 

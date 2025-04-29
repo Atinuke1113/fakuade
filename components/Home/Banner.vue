@@ -1,7 +1,7 @@
 <template>
-    <div class="relative w-full h-24 overflow-hidden bg-orange-600">
+    <div class="relative w-full h-16 overflow-hidden bg-orange-600">
       <!-- First Moving Strip -->
-      <div class="absolute top-2 w-full py-4 flex items-center"
+      <div class="absolute top-2 w-full py-2 flex items-center"
            :style="{ transform: `translateX(${position1}px)` }">
         <div class="flex items-center gap-6 whitespace-nowrap">
           <template v-for="n in 10" :key="n">

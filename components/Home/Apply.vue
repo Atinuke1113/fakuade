@@ -23,7 +23,7 @@
           >
           <button 
             type="submit"
-            class="px-8 py-3 bg-[#14B8A6] text-white font-semibold rounded-lg hover:bg-[#14B8B8] transition-colors"
+            class="px-8 py-3  bg-[#14B8A6] text-white font-semibold rounded-lg hover:bg-[#14B8B8] transition-colors"
             v-motion
             :initial="{ scale: 1 }"
             :hover="{ scale: 1.05 }"
