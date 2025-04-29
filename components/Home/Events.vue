@@ -25,7 +25,7 @@
         </div>
   
         <!-- Events Timeline -->
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-5xl mx-auto text-center">
           <div class="space-y-12">
             <!-- Event 1 -->
             <div class="group relative"

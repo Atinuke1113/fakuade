@@ -3,10 +3,11 @@
     <!-- Background Video -->
     <div class="absolute inset-0 opacity-70">
       <video 
-        class="w-full h-full object-cover"
+        class="absolute w-full h-full object-cover"
         autoplay 
         muted 
         loop 
+        playsinline
         :src="'/images/video.mp4'"
       ></video>
       <div class="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent"></div>

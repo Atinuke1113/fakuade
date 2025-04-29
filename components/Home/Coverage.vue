@@ -23,14 +23,14 @@
           <div class="w-full lg:w-1/2 flex flex-col justify-center lg:pr-12 pt-20 lg:pt-0">
             <TransitionGroup name="fade-slide">
               <div v-if="currentSlide === 1" key="slide1" class="text-center lg:text-left">
-               <h1 class="text-5xl md:text-5xl lg:text-7xl 2xl:text-8xl font-bold text-white mb-6 lg:mb-8 leading-tight split-chars"
+               <h1 class="text-5xl md:text-3xl lg:text-7xl 2xl:text-8xl font-bold text-white mb-6 lg:mb-8 leading-tight split-chars"
                     v-motion
                     :initial="{ opacity: 0 }"
                     :enter="{ opacity: 1, transition: { duration: 800, stagger: 20 } }">
                  A Leader Rooted in Vision &
                   <span class="text-orange-600">Guided by Value</span>
                 </h1>
-                <p class="text-gray-400 text-lg md:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed"
+                <p class="text-gray-400 text-lg md:text-sm max-w-xl mx-auto lg:mx-0 leading-relaxed"
                    v-motion
                    :initial="{ opacity: 0, y: 20 }"
                    :enter="{ opacity: 1, y: 0, transition: { duration: 800, delay: 500 } }">
@@ -38,14 +38,14 @@
                 </p>
               </div>
               <div v-else key="slide2" class="text-center lg:text-left">
-                <h1 class="text-5xl md:text-5xl lg:text-7xl 2xl:text-8xl font-bold text-white mb-6 lg:mb-8 leading-tight split-chars"
+                <h1 class="text-5xl md:text-3xl lg:text-7xl 2xl:text-8xl font-bold text-white mb-6 lg:mb-8 leading-tight split-chars"
                     v-motion
                     :initial="{ opacity: 0 }"
                     :enter="{ opacity: 1, transition: { duration: 800, stagger: 20 } }">
                  A Visionary Man Building
                   <span class="text-[#14B8A6]">Legacy of Impact</span>
                 </h1>
-                <p class="text-gray-400 text-lg md:text-xl max-w-xl mx-auto lg:mx-0  leading-relaxed"
+                <p class="text-gray-400 text-lg md:text-sm max-w-xl mx-auto lg:mx-0  leading-relaxed"
                    v-motion
                    :initial="{ opacity: 0, y: 20 }"
                    :enter="{ opacity: 1, y: 0, transition: { duration: 800, delay: 500 } }">
