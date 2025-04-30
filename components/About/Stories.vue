@@ -22,7 +22,7 @@
               <div class="md:flex">
                 <div class="md:w-1/2">
                   <img 
-                    src="/images/gallery6.jpg" 
+                    src="/images/seun.jpg" 
                     alt="Digital Transformation"
                     class="w-full h-full object-cover"
                   >

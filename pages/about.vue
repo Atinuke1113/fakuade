@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <HomeCoverage></HomeCoverage>
+    <AboutNewhero></AboutNewhero>
     <HomeGateway></HomeGateway>
     <HomeSnapshot></HomeSnapshot>
     <AboutStories></AboutStories>
