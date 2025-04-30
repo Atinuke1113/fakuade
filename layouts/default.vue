@@ -2,65 +2,80 @@
   <div class="min-h-screen flex flex-col">
     <!-- Navbar -->
     <nav class="fixed w-full bg-black/80 backdrop-blur-lg z-50 shadow-sm">
-      <div class="container mx-auto px-4 sm:px-6">
-  <div class="flex items-center justify-between h-16 sm:h-20">
-    <!-- Logo -->
-    <NuxtLink to="/" class="flex items-center space-x-2">
-      <img 
-                src="/images/logo2.png" 
-                alt="logo" 
-                class="w-24 h-12"
-              />
-    </NuxtLink>
-
-    <!-- Desktop Navigation -->
-    <div class="hidden md:flex items-center space-x-1 lg:space-x-4">
-      <NuxtLink v-for="item in navItems" 
-                :key="item.path"
-                :to="item.path"
-                class="px-3 lg:px-4 py-2 text-xs lg:text-base text-white hover:text-orange-600 rounded-lg transition-colors"
-                :class="{ 'text-orange-600 bg-accent/12': isCurrentPath(item.path) }">
-        {{ item.name }}
-      </NuxtLink>
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <button @click="toggleMenu" 
-            class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-            aria-label="Toggle menu">
-      <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path v-if="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Navigation -->
-  <transition
-    enter-active-class="transition duration-200 ease-out"
-    enter-from-class="transform -translate-y-2 opacity-0"
-    enter-to-class="transform translate-y-0 opacity-100"
-    leave-active-class="transition duration-150 ease-in"
-    leave-from-class="transform translate-y-0 opacity-100"
-    leave-to-class="transform -translate-y-2 opacity-0"
-  >
-    <div v-if="isMenuOpen" 
-         class="md:hidden py-2 border-t"
-         @click.self="closeMenu">
-      <div class="space-y-1">
-        <NuxtLink v-for="item in navItems" 
-                  :key="item.path"
-                  :to="item.path"
-                  class="block px-4 py-3 text-base text-gray-400 hover:text-orange-600 hover:bg-gray-50 rounded-lg transition-colors"
-                  :class="{ 'text-orange-600 bg-accent/5': isCurrentPath(item.path) }"
-                  @click="closeMenu">
-          {{ item.name }}
+    <div class="container mx-auto px-4 sm:px-6">
+      <!-- Main Navigation -->
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <NuxtLink to="/" class="flex items-center space-x-2">
+          <img src="/images/logo2.png" alt="logo" class="w-24 h-12" />
         </NuxtLink>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center">
+          <div v-for="(item, index) in menuItems" 
+               :key="index" 
+               class="group relative"
+               @mouseenter="activeDropdown = item.name"
+               @mouseleave="activeDropdown = null">
+            <NuxtLink :to="item.path" 
+                     class="px-6 py-6 text-white hover:text-orange-600 transition-all">
+              {{ item.name }}
+            </NuxtLink>
+
+            <!-- Dropdown Panel - Only show if subItems exists -->
+            <div v-if="item.subItems && item.subItems.length && activeDropdown === item.name"
+                 class="absolute top-full left-0 w-screen bg-white -ml-[50vw] left-1/2 transform">
+              <div class="container mx-auto px-4 py-6">
+                <div class="grid grid-cols-4 gap-6">
+                  <NuxtLink v-for="subItem in item.subItems"
+                           :key="subItem.name"
+                           :to="subItem.path"
+                           @click="handleNavigation(subItem.path)"
+                           class="p-4 hover:bg-gray-50 rounded-lg group transition-all duration-300">
+                    <div class="flex items-center space-x-4">
+                      <i :class="subItem.icon" class="text-2xl text-gray-400 group-hover:text-orange-600"></i>
+                      <div>
+                        <h3 class="text-gray-800 font-medium group-hover:text-orange-600">{{ subItem.name }}</h3>
+                        <p class="text-sm text-gray-500">{{ subItem.description }}</p>
+                      </div>
+                    </div>
+                  </NuxtLink>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button @click="isMobileMenuOpen = !isMobileMenuOpen" 
+                class="md:hidden text-white">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div v-if="isMobileMenuOpen" 
+           class="md:hidden bg-white absolute left-0 right-0 top-full">
+        <div class="px-4 py-2">
+          <div v-for="(item, index) in menuItems" :key="index">
+            <button @click="toggleMobileSubmenu(item)"
+                    class="w-full px-4 py-3 flex justify-between items-center text-gray-800 hover:text-orange-600">
+              {{ item.name }}
+              <i v-if="item.subItems && item.subItems.length" class="fas fa-chevron-down"></i>
+            </button>
+            <div v-if="item.subItems && item.subItems.length && item.isOpen" 
+                 class="bg-gray-50 px-4 py-2">
+              <NuxtLink v-for="subItem in item.subItems"
+                        :key="subItem.name"
+                        :to="subItem.path"
+                        class="block py-2 px-4 text-gray-600 hover:text-orange-600">
+                {{ subItem.name }}
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </transition>
-</div>
-    </nav>
+  </nav>
 
     <!-- Spacer -->
     <div class="h-16 sm:h-20"></div>
@@ -119,45 +134,112 @@
 </template>
 
 <script setup>
-import { ref, watch, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
+const router = useRouter()
+const activeDropdown = ref(null)
+const isMobileMenuOpen = ref(false)
 
-const isMenuOpen = ref(false)
-const route = useRoute()
+const menuItems = ref([
+  {
+    name: 'Home',
+    path: '/',
+    subItems: [] // Empty array instead of undefined
+  },
+  {
+    name: 'About',
+    path: '/about',
+    subItems: [] // Empty array instead of undefined
+  },
+  {
+    name: 'Foundations',
+    path: '/about',
+    subItems: [
+      {
+        name: 'Scholarship',
+        path: '/scholarship',
+        icon: 'fa fa-graduation-cap',
+        description: 'Seun Fakuade Scholarship Fund'
+      },
+      {
+        name: 'Youth Empowerment',
+        path: '/youth/empowerment',
+        icon: 'fas fa-users',
+        description: 'Investing in the next generation through digital skills development'
+      },
+      {
+        name: 'Youth Innovation',
+        path: '/youth/innovation',
+        icon: 'fas fa-globe',
+        description: 'Embracing cutting-edge technologies and creative solutions '
+      }
+    ]
+  },
+ 
+  {
+    name: 'Thought Leadership',
+    path: '/gallery',
+    subItems: [] // Empty array instead of undefined
+  },
+  {
+    name: 'Articles',
+    path: '/new',
+    subItems: [] // Empty array instead of undefined
+  },
+  {
+    name: 'Contact',
+    path: '/contact',
+    subItems: [] // Empty array instead of undefined
+  }
+])
 
-const navItems = [
-  { name: 'HOME', path: '/' },
-  { name: 'ABOUT', path: '/about' },
-  { name: 'SCHOLARSHIP', path: '/scholarship' },
-  { name: 'THOUGHT LEADERSHIP', path: '/thoughtleadership' },
-  { name: 'NEWS&BLOG', path: '/new' },
-  { name: 'CONTACT', path: '/contact' }
-]
+const handleNavigation = (path) => {
+  activeDropdown.value = null
+  isMobileMenuOpen.value = false
+  navigateTo(path)
+}
 
-const isCurrentPath = (path) => route.path === path
-
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-  if (isMenuOpen.value) {
-    document.body.style.overflow = 'hidden'
+const toggleMobileSubmenu = (item) => {
+  if (item.subItems && item.subItems.length) {
+    item.isOpen = !item.isOpen
   } else {
-    document.body.style.overflow = ''
+    navigateTo(item.path)
+    isMobileMenuOpen.value = false
+  }
+}
+</script>
+<style scoped>
+.group:hover .group-hover\:block {
+  display: block;
+}
+
+/* Dropdown Animation */
+.absolute {
+  animation: dropdownFade 0.3s ease-out;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-const closeMenu = () => {
-  isMenuOpen.value = false
-  document.body.style.overflow = ''
+/* Mobile Menu Animation */
+.md\:hidden {
+  animation: slideDown 0.3s ease-out;
 }
 
-// Close mobile menu when route changes
-watch(route, closeMenu)
-
-// Close mobile menu when screen size changes to desktop
-onMounted(() => {
-  const mediaQuery = window.matchMedia('(min-width: 768px)')
-  mediaQuery.addEventListener('change', (e) => {
-    if (e.matches) closeMenu()
-  })
-})
-</script>
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
