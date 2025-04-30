@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <HomeCoverage></HomeCoverage>
-    <AboutMission></AboutMission>
+    <HomeGateway></HomeGateway>
     <HomeSnapshot></HomeSnapshot>
     <AboutStories></AboutStories>
     <HomeGallery></HomeGallery>
