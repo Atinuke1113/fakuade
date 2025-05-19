@@ -19,7 +19,7 @@
           </div>
         </div>
   
-        <div class="container mx-auto px-4 relative py-24 pb-32">
+        <div class="container mx-auto px-4 relative py-10 pb-32">
           <div class="max-w-4xl mx-auto text-center">
             <!-- Main Title -->
             <h1 

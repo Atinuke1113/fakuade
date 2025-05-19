@@ -22,7 +22,7 @@
               <div class="md:flex">
                 <div class="md:w-1/2">
                   <img 
-                    src="/images/seun.jpg" 
+                    src="/images/action1.jpg" 
                     alt="Digital Transformation"
                     class="w-full h-full object-cover"
                   >
@@ -64,7 +64,7 @@
               <div class="md:flex flex-row-reverse">
                 <div class="md:w-1/2">
                   <img 
-                    src="/images/gallery6.jpg" 
+                    src="/images/action2.jpg" 
                     alt="Innovation Hub"
                     class="w-full h-full object-cover"
                   >

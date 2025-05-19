@@ -1,141 +1,157 @@
 <template>
-  <section class="py-20 relative h-screen bg-black overflow-hidden">
-    <!-- Background Video -->
-    <div class="absolute inset-0 opacity-70">
-      <video 
-        class="absolute w-full h-full object-cover"
-        autoplay 
-        muted 
-        loop 
-        playsinline
-        :src="'/images/video.mp4'"
-      ></video>
-      <div class="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent"></div>
+  <div class="relative min-h-screen w-full overflow-hidden">
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+    <source src="/images/video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+    <!-- Dynamic Background -->
+    <div class="absolute inset-0">
+      <div class="grid-pattern"></div>
+      <div class="gradient-overlay"></div>
     </div>
-
-   
-
-    <!-- Floating Images -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-  <div class="relative w-full h-full">
-    <div v-for="(image, index) in floatingImages" 
-         :key="index"
-         class="floating-image absolute"
-         :style="{
-           top: `${image.top}%`,
-           right: `${image.right}%`,
-           zIndex: image.zIndex,
-           animationDelay: `${index * 3}s`
-         }">
-      <img 
-        :src="`https://source.unsplash.com/800x600/?videography,${index}`" 
-        :alt="`Video Production ${index + 1}`" 
-        class="w-48 h-32 object-cover rounded-lg shadow-2xl"
-      >
-    </div>
-  </div>
-</div>
 
     <!-- Main Content -->
-    <div class="container mx-auto px-4 h-full relative z-10">
-      <div class="flex flex-col justify-center h-full max-w-4xl">
-        <h1 class="text-7xl md:text-8xl font-serif text-white mb-8"
+    <div class="container mx-auto px-4 relative min-h-screen flex items-center">
+      <div class="grid grid-cols-12 gap-8">
+        <!-- Left Content -->
+        <div class="col-span-5 relative z-10">
+          <div 
             v-motion
-            :initial="{ opacity: 0, y: 50 }"
-            :enter="{ opacity: 1, y: 0 }">
-         Hon. Seun Fakuade
-        </h1>
-        <div class="space-y-4"
-             v-motion
-             :initial="{ opacity: 0 }"
-             :enter="{ opacity: 1, transition: { delay: 500 } }">
-          <p class="text-xl text-gray-300">A Leader Rooted in Vision,<span class="text-orange-600"> Guided by Values</span></p>
-          <p class="text-lg text-gray-400 max-w-xl">
-            Seun Fakuade stands at the intersection of innovation and leadership —<br>
-            A man with a mission to transform not just systems, but lives.
-          </p>
-          <NuxtLink to="/about">
-          <button class="mt-6 px-6 py-3 bg-orange-600 text-white rounded-full hover:bg-orange-700 transition-colors flex items-center gap-2">
-      LEARN MORE <i class="fas fa-arrow-right"></i>
-          </button>
-        </NuxtLink>
+            :initial="{ opacity: 0, x: -50 }"
+            :enter="{ opacity: 1, x: 0, transition: { duration: 1000 } }"
+            class="space-y-8"
+          >
+            <h1 
+              class="relative text-9xl font-bold leading-none"
+              v-motion
+              :initial="{ opacity: 0, x: -50 }"
+              :enter="{ opacity: 1, x: 0, transition: { duration: 1000 } }"
+            >
+              <span class="stroke-text">SEUN</span><br>
+              <span class="text-orange-600 stroke-text-orange">FAKUADE</span><br>
+              
+              
+              <!-- Text Shadow Layer -->
+              <div class="absolute -left-1 top-0 opacity-10 pointer-events-none">
+                <span class="text-white">SEUN</span><br>
+                <span class="text-white">FAKUADE</span><br>
+                
+              </div>
+            </h1>
+            <p class="text-gray-400 text-lg">A Leader Rooted in Vision, Guided by Values.</p>
+            <button class="group relative px-8 py-4 overflow-hidden">
+              <span class="relative z-10 text-white group-hover:text-black transition-colors duration-500">
+                Learn More
+              </span>
+              <div class="absolute inset-0 bg-orange-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+            </button>
+          </div>
         </div>
+       
       </div>
 
-      <!-- Social Icons -->
-      <div class="absolute bottom-12 right-12 flex flex-col gap-6"
-           v-motion
-           :initial="{ opacity: 0, x: 50 }"
-           :enter="{ opacity: 1, x: 0, transition: { delay: 1000 } }">
-        <a href="#" class="text-white hover:text-orange-600 transition-colors">
-          <i class="fab fa-instagram text-2xl"></i>
-        </a>
-        <a href="#" class="text-white hover:text-orange-600 transition-colors">
-          <i class="fab fa-twitter text-2xl"></i>
-        </a>
-        <a href="#" class="text-white hover:text-orange-600 transition-colors">
-          <i class="fab fa-linkedin-in text-2xl"></i>
-        </a>
-      </div>
+    
     </div>
-  </section>
+
+    <!-- Animated Lines -->
+    <div class="lines-animation">
+      <div v-for="n in 5" :key="`line-${n}`" class="line"></div>
+    </div>
+  </div>
 </template>
 
 <script setup>
-const floatingImages = [
-  { top: 15, right: 0, zIndex: 1 },
-  { top: 35, right: 20, zIndex: 2 },
-  { top: 55, right: 40, zIndex: 3 },
-  { top: 75, right: 60, zIndex: 4 }
-]
-[
-  {
-    src: '/images/gallery6.jpg',
-    alt: 'Portfolio 1',
-    top: 60,
-    duration: 15,
-    delay: 0
-  },
-  {
-    src: '/images/gallery2.jpg',
-    alt: 'Portfolio 2',
-    top: 70,
-    duration: 18,
-    delay: 2
-  },
-  {
-    src: '/images/gallery6.jpg',
-    alt: 'Portfolio 3',
-    top: 70,
-    duration: 40,
-    delay: 2
-  }
+import { ref, onMounted } from 'vue'
+
+const images = [
+  '/images/portfolio1.jpg',
+  '/images/portfolio2.jpg',
+  '/images/portfolio3.jpg'
 ]
 
+const currentIndex = ref(0)
+
+onMounted(() => {
+  setInterval(() => {
+    currentIndex.value = (currentIndex.value + 1) % images.length
+  }, 5000)
+})
 </script>
 
 <style scoped>
-.floating-images-container {
-  position: absolute;
+.grid-pattern {
+  background-image: radial-gradient(#333 1px, transparent 1px);
+  background-size: 30px 30px;
   width: 100%;
   height: 100%;
+  opacity: 0.3;
+  animation: patternMove 20s linear infinite;
 }
 
-.floating-image {
-  animation: floatAcross 15s linear infinite;
-  opacity: 0.8;
-  transform: translateX(100vw);
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #111 0%, transparent 100%);
 }
 
-@keyframes floatAcross {
-  0% {
-    transform: translateX(100vw);
-  }
-  100% {
-    transform: translateX(-100vw);
-  }
+.lines-animation {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
-.font-serif {
-  font-family: "Bodoni Moda", serif;
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #ff6b00, transparent);
+  animation: lineMove 8s linear infinite;
+  opacity: 0;
+}
+
+.line:nth-child(1) { left: 20%; animation-delay: 0s; }
+.line:nth-child(2) { left: 40%; animation-delay: 2s; }
+.line:nth-child(3) { left: 60%; animation-delay: 4s; }
+.line:nth-child(4) { left: 80%; animation-delay: 6s; }
+.line:nth-child(5) { left: 90%; animation-delay: 8s; }
+
+.stroke-text {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  text-shadow: 5px 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.stroke-text-orange {
+  -webkit-text-stroke: 2px #ff6b00;
+  color: transparent;
+  text-shadow: 5px 5px 15px rgba(255, 107, 0, 0.2);
+}
+
+@keyframes lineMove {
+  0% { transform: translateY(-100%); opacity: 0; }
+  20% { opacity: 0.5; }
+  80% { opacity: 0.5; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
+@keyframes patternMove {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(30px); }
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.8s ease;
+}
+
+.slide-enter-from {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.slide-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
 }
 </style>

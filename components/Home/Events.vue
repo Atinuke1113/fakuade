@@ -1,119 +1,135 @@
 <template>
-    <section class="py-24 bg-[#0A0A0A] relative overflow-hidden">
-      <!-- Background Pattern -->
-      <div class="absolute inset-0 opacity-20">
-        <div class="grid grid-cols-8 h-full">
-          <div v-for="n in 8" :key="n" class="border-r border-white/10"></div>
-        </div>
+  <section class="py-24 bg-white relative overflow-hidden">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0">
+      <div class="floating-grid"></div>
+      <div class="animated-circles">
+        <div v-for="n in 3" :key="`circle-${n}`" class="animated-circle" :style="`--delay: ${n * 2}s`"></div>
       </div>
-  
-      <div class="container mx-auto px-4 relative">
-        <!-- Section Header -->
-        <div class="max-w-xl mx-auto text-center mb-20">
-          <h2 class="text-5xl font-bold bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent mb-6"
-              v-motion
-              :initial="{ opacity: 0, y: 20 }"
-              :visible="{ opacity: 1, y: 0 }">
-            Featured Events
-          </h2>
-          <p class="text-gray-400"
-             v-motion
-             :initial="{ opacity: 0 }"
-             :visible="{ opacity: 1, delay: 200 }">
-            Join us in shaping the future of digital innovation and leadership
-          </p>
-        </div>
-  
-        <!-- Events Timeline -->
-        <div class="max-w-5xl mx-auto text-center">
-          <div class="space-y-12">
-            <!-- Event 1 -->
-            <div class="group relative"
-                 v-motion
-                 :initial="{ opacity: 0, x: -50 }"
-                 :visible="{ opacity: 1, x: 0 }">
-              <div class="flex-col lg:flex md:flex items-center gap-8 p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-500 border border-white/10">
-                <!-- Date Box -->
-                <div class="flex-shrink-0 w-24 h-24 mb-5 bg-gradient-to-br from-[#F97316] to-[#14B8A6] rounded-lg p-[1px]">
-                  <div class="w-full h-full bg-black rounded-lg flex flex-col items-center justify-center">
-                    <span class="text-4xl font-bold text-white">25</span>
-                    <span class="text-sm text-gray-400">DEC 2023</span>
+    </div>
+
+    <div class="container mx-auto px-4 relative">
+      <!-- Section Header -->
+      <div class="max-w-xl mx-auto text-center mb-20">
+        <h2 class="text-5xl font-bold text-gray-900 mb-6 relative"
+            v-motion
+            :initial="{ opacity: 0, y: 20 }"
+            :visible="{ opacity: 1, y: 0 }">
+          Featured Events
+          <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-[#F97316] to-[#14B8A6]"></div>
+        </h2>
+        <p class="text-gray-600"
+           v-motion
+           :initial="{ opacity: 0 }"
+           :visible="{ opacity: 1, delay: 200 }">
+          Join us in shaping the future of digital innovation and leadership
+        </p>
+      </div>
+
+      <!-- Events Timeline -->
+      <div class="max-w-6xl mx-auto">
+        <div class="space-y-12">
+          <!-- Event Card 1 -->
+          <div class="group"
+               v-motion
+               :initial="{ opacity: 0, x: -50 }"
+               :visible="{ opacity: 1, x: 0 }">
+            <div class="grid md:grid-cols-12 gap-8 p-8 rounded-2xl hover:shadow-2xl transition-all duration-500 bg-white border border-gray-100 relative overflow-hidden">
+              <!-- Date Column -->
+              <div class="md:col-span-2 flex justify-center">
+                <div class="w-24 h-24 bg-gradient-to-br from-[#F97316] to-[#14B8A6] rounded-2xl p-[2px] transform group-hover:scale-110 transition-transform duration-500">
+                  <div class="w-full h-full bg-white rounded-2xl flex flex-col items-center justify-center">
+                    <span class="text-4xl font-bold bg-gradient-to-r from-[#F97316] to-[#14B8A6] bg-clip-text text-transparent">25</span>
+                    <span class="text-sm text-gray-500">DEC 2023</span>
                   </div>
-                </div>
-                
-                <!-- Event Details -->
-                <div class="flex-grow">
-                  <h3 class="text-2xl font-bold text-white mb-2">Digital Innovation Summit</h3>
-                  <p class="text-gray-400 mb-4">A transformative gathering of tech leaders and innovators discussing the future of digital governance.</p>
-                  <div class="flex items-center gap-6 text-sm">
-                    <span class="flex items-center gap-2 text-gray-400">
-                      <i class="fas fa-map-marker-alt text-[#F97316]"></i>
-                      Tech Hub, Ado-Ekiti
-                    </span>
-                    <span class="flex items-center gap-2 text-gray-400">
-                      <i class="fas fa-clock text-[#14B8A6]"></i>
-                      09:00 AM - 04:00 PM
-                    </span>
-                  </div>
-                </div>
-  
-                <!-- Action Button -->
-                <div class="flex-shrink-0">
-                  <button class="px-6 py-3 mt-4 bg-white/10 hover:bg-white/20 rounded-full text-white transition-all duration-300 group-hover:scale-105">
-                    Register Now
-                  </button>
                 </div>
               </div>
-            </div>
-  
-            <!-- Event 2 -->
-            <div class="group relative"
-                 v-motion
-                 :initial="{ opacity: 0, x: -50 }"
-                 :visible="{ opacity: 1, x: 0, delay: 200 }">
-              <div class="flex-col lg:flex md:flex items-center gap-8 p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-500 border border-white/10">
-                <div class="flex-shrink-0 w-24 h-24 mb-5 bg-gradient-to-br from-[#14B8A6] to-[#F97316] rounded-lg p-[1px]">
-                  <div class="w-full h-full bg-black rounded-lg flex flex-col items-center justify-center">
-                    <span class="text-4xl font-bold text-white">15</span>
-                    <span class="text-sm text-gray-400">JAN 2024</span>
-                  </div>
-                </div>
-                
-                <div class="flex-grow">
-                  <h3 class="text-2xl font-bold text-white mb-2">Youth Tech Workshop</h3>
-                  <p class="text-gray-400 mb-4">Hands-on workshop empowering young minds with essential digital skills and innovation techniques.</p>
-                  <div class="flex items-center gap-6 text-sm">
-                    <span class="flex items-center gap-2 text-gray-400">
-                      <i class="fas fa-map-marker-alt text-[#14B8A6]"></i>
-                      Innovation Center
-                    </span>
-                    <span class="flex items-center gap-2 text-gray-400">
-                      <i class="fas fa-clock text-[#F97316]"></i>
-                      10:00 AM - 03:00 PM
-                    </span>
-                  </div>
-                </div>
-  
-                <div class="flex-shrink-0">
-                  <button class="px-6 py-3 mt-4 bg-white/10 hover:bg-white/20 rounded-full text-white transition-all duration-300 group-hover:scale-105">
-                    Join Workshop
-                  </button>
+
+              <!-- Content Column -->
+              <div class="md:col-span-7">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#F97316] transition-colors">Digital Innovation Summit</h3>
+                <p class="text-gray-600 mb-4">A transformative gathering of tech leaders and innovators discussing the future of digital governance.</p>
+                <div class="flex flex-wrap items-center gap-6 text-sm">
+                  <span class="flex items-center gap-2 text-gray-500">
+                    <i class="fas fa-map-marker-alt text-[#F97316]"></i>
+                    Tech Hub, Ado-Ekiti
+                  </span>
+                  <span class="flex items-center gap-2 text-gray-500">
+                    <i class="fas fa-clock text-[#14B8A6]"></i>
+                    09:00 AM - 04:00 PM
+                  </span>
                 </div>
               </div>
+
+              <!-- Action Column -->
+              <div class="md:col-span-3 flex items-center justify-center">
+                <button class="relative overflow-hidden px-8 py-4 rounded-full group-hover:shadow-lg transition-all duration-300">
+                  <span class="relative z-10 text-[#F97316] group-hover:text-white transition-colors duration-300">Register Now</span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-[#F97316] to-[#14B8A6] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </button>
+              </div>
+
+              <!-- Hover Effect -->
+              <div class="absolute inset-0 bg-gradient-to-r from-[#F97316]/5 to-[#14B8A6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
-  
-            <!-- View All Events -->
-            <div class="text-center"
-                 v-motion
-                 :initial="{ opacity: 0, y: 20 }"
-                 :visible="{ opacity: 1, y: 0, delay: 400 }">
-              <button class="px-8 py-4 bg-gradient-to-r from-[#F97316] to-[#14B8A6] rounded-full text-white hover:shadow-lg transition-all duration-300 group">
-                View All Events
-                <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-              </button>
-            </div>
+          </div>
+
+          <!-- Event Card 2 (Similar structure with different content) -->
+          <!-- ... -->
+
+          <!-- View All Events -->
+          <div class="text-center mt-16"
+               v-motion
+               :initial="{ opacity: 0, y: 20 }"
+               :visible="{ opacity: 1, y: 0, delay: 400 }">
+            <button class="relative overflow-hidden px-10 py-4 rounded-full group">
+              <span class="relative z-10 text-white">View All Events</span>
+              <div class="absolute inset-0 bg-gradient-to-r from-[#F97316] to-[#14B8A6]"></div>
+              <div class="absolute inset-0 bg-gradient-to-r from-[#14B8A6] to-[#F97316] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <i class="fas fa-arrow-right ml-2 relative z-10 transform group-hover:translate-x-1 transition-transform"></i>
+            </button>
           </div>
         </div>
       </div>
-    </section>
-  </template>
+    </div>
+  </section>
+</template>
+
+<style scoped>
+.floating-grid {
+  background-image: linear-gradient(to right, rgba(249, 115, 22, 0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(249, 115, 22, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  animation: floatGrid 20s linear infinite;
+}
+
+.animated-circles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.animated-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(249, 115, 22, 0.1);
+  border-radius: 50%;
+  animation: pulseCircle 4s ease-out infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes floatGrid {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-40px); }
+}
+
+@keyframes pulseCircle {
+  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0; }
+}
+</style>

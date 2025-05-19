@@ -51,7 +51,7 @@
               <p class="text-gray-600 mb-6">
                 High-resolution photos, logos, and official press materials
               </p>
-              <a href="/downloads/seun-fakuade-media-kit.zip" 
+              <a href="/images/Media.zip" 
                  class="inline-flex items-center gap-2 px-6 py-3 bg-[#14B8A6] text-white rounded-lg hover:bg-[#13A89A] transition-colors duration-300">
                 <i class="fas fa-download"></i>
                 Download Media Kit

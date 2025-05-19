@@ -15,12 +15,6 @@
           <!-- Left Content -->
           <div class="z-10">
             <h1 class="overflow-hidden">
-              <span class="text-[#FFFFFF] text-5xl md:text-6xl font-bold mb-2 block"
-                    v-motion
-                    :initial="{ y: 100, opacity: 0 }"
-                    :enter="{ y: 0, opacity: 1, transition: { delay: 200, duration: 800 } }">
-                HON.
-              </span>
               <span class="text-[#F97316] text-5xl md:text-6xl font-bold block"
                     v-motion
                     :initial="{ y: 100, opacity: 0 }"
@@ -54,7 +48,7 @@
                :initial="{ scale: 0.8, opacity: 0 }"
                :enter="{ scale: 1, opacity: 1, transition: { delay: 200, duration: 1000 } }">
             <div class="relative">
-              <img src="/images/commm.jpg" alt="Profile" class="w-full h-[85vh] object-cover object-center rounded-xl">
+              <img src="/images/aboutimg.jpg" alt="Profile" class="w-full h-[85vh] object-cover object-center rounded-xl">
             </div>
           </div>
   
@@ -88,7 +82,7 @@
   
             <div class="text-center mb-12 z-10">
               <h1 class="mb-6">
-                <span class="text-white text-4xl font-bold block mb-2">HON.</span>
+                
                 <span class="text-[#F97316] text-4xl font-bold block">SEUN FAKUADE</span>
               </h1>
               <p class="text-white text-lg mb-8 max-w-2xl mx-auto">
@@ -121,12 +115,12 @@
         <div class="md:hidden pt-20 pb-10">
           <div class="flex flex-col">
             <div class="w-full mb-8 z-20">
-              <img src="/images/commm.jpg" alt="Profile" class="w-full h-[40vh] object-cover object-center rounded-xl">
+              <img src="/images/aboutimg.jpg" alt="Profile" class="w-full h-[40vh] object-cover object-center rounded-xl">
             </div>
   
             <div class="text-center mb-8 z-10 px-4">
               <h1 class="mb-6">
-                <span class="text-white text-3xl font-bold block mb-2">HON.</span>
+               
                 <span class="text-[#F97316] text-3xl font-bold block">SEUN FAKUADE</span>
               </h1>
               <p class="text-white text-base mb-8">
@@ -167,17 +161,17 @@
   const services = [
     {
       title: 'VISIONARY',
-      description: 'Seun Fakuade is not just a leader — he is a visionary. Guided by purpose and powered by innovation',
+      description: 'He is not just a leader — he is a visionary. Guided by purpose and powered by innovation',
       icon: 'fas fa-eye'
     },
     {
       title: 'LEADERSHIP',
-      description: 'Seun Fakuade leads with conviction, clarity, and a deep commitment to public service',
+      description: 'He leads with conviction, clarity, and a deep commitment to public service',
       icon: 'fas fa-male'
     },
     {
       title: 'INNOVATION',
-      description: 'Seun Fakuade embodies innovation — not just in technology, but in thinking, governance, and leadership',
+      description: 'He embodies innovation — not just in technology, but in thinking, governance, and leadership',
       icon: 'fas fa-globe'
     }
   ]
@@ -190,13 +184,12 @@
   
   img {
     filter: brightness(1.1);
-    box-shadow: 0 0 20px #F97316;
     transition: all 0.5s ease;
   }
   
   img:hover {
     transform: scale(1.02);
-    box-shadow: 0 0 60px #F97316;
+
   }
   
   .particles {

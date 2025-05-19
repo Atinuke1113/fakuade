@@ -4,7 +4,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@vueuse/motion/nuxt',
-    // other modules if any
+
   ],
 
   postcss: {
