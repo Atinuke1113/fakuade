@@ -168,7 +168,7 @@
       icon: 'fas fa-globe'
     },
     {
-      title: 'POLICY WORK',
+      title: 'POLICY WONK',
       icon: 'fas fa-briefcase'
     }
   ]
