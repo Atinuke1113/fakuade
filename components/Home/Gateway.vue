@@ -9,7 +9,7 @@
           <div class="book" @mouseenter="isOpen = true" @mouseleave="isOpen = false">
             <!-- Book Cover -->
             <div class="front-cover" :class="{ 'open': isOpen }">
-              <img src="/images/gallery6.jpg" alt="Book Cover" class="cover-image">
+              <img src="/images/newabt.jpg" alt="Book Cover" class="cover-image">
               <div class="cover-content"></div>
               <div class="spine"></div>
             </div>
@@ -19,22 +19,25 @@
               <!-- Left Page -->
               <div class="page left">
                 <div class="page-content">
-                  <p>I am Seun Fakuade, and I am excited to introduce myself to you.</p>
-                  <p>I am a passionate individual with a drive for success in all aspects of my life. I am from Nigeria, Oye in Ekiti State precisely. I have a strong work ethic and a determination to achieve my goals.</p>
-                  <p>I have a diverse educational background, with a Bachelor's degree in Microbiology and a Master's degree in Public Administration from the prestigious Lee Kuan Yew School of Public Policy. This combination has allowed me to gain a wide range of skills and a unique perspective on problem-solving. I am a lifelong learner, always seeking out new knowledge and ways to improve myself both personally and professionally.</p>
+                  <p>Seun Fakuade, appointed as the youngest executive council member (2022-2026), serves as Commissioner for Innovation, Science, and Digital Economy, a transformative leader propelling Ekiti State into the forefront of Nigeria’s digital revolution. With a formidable blend of expertise in development economics, public policy, and strategic governance, Seun is redefining progress by positioning Ekiti as a global beacon of innovation-driven prosperity. His mission: is to craft an eternal blueprint for States where ideas ignite, opportunities abound, and every citizen shapes a vibrant future.
+                  .</p>
                 </div>
               </div>
   
               <!-- Right Page -->
               <div class="page right">
                 <div class="page-content">
-                  <p>Throughout my career, I have gained valuable experience in various industries, from various great mentors like Mallam Nasir El Rufai and Dr. John Kayode Fayemi.</p>
-                  <p>I am a natural leader, with the ability to motivate and inspire those around me to strive for excellence. I believe in fostering a positive work environment where collaboration and teamwork are valued, leading to increased productivity and success</p>
-                  <p>In my free time, I enjoy traveling, exploring new cultures, and engaging in adventurous activities. These experiences have taught me the value of embracing new challenges and stepping out of my comfort zone</p>
+                  <p>Globally, Seun contributed to forward-thinking initiatives, including a 5-year Smart City Agenda for Chiang Mai, Thailand (2015–2016) and a reform-oriented policy to address Japan’s Juku system. These experiences cemented his reputation as a policy wonk and governance specialist with a global perspective.
+                  </p>
+                  <p>Appointed Special Adviser on Governance, Reforms, and Innovation to Governor Biodun Oyebanji, and later Commissioner, Seun has driven Ekiti’s ambitious digital agenda.</p>
+                  
                   <div class="last">
-                    <p class="italic text-orange-600">
-                      Thank you for taking the time to read my introduction. I look forward to connecting with you!
-                    </p>
+                    <a href="/images/SEUN'S_BIOGRAPHY.pdf" 
+                 class="inline-flex items-center gap-2 px-6 py-3 bg-[#F97316] text-white rounded-lg hover:bg-[#E97316] transition-colors duration-300">
+                <i class="fas fa-arrow"></i>
+                Click here to read more
+              </a>
+                    
                   </div>
                 </div>
               </div>
@@ -48,29 +51,21 @@
         <div class="space-y-6">
           <div class="prose prose-lg">
             <div>
+              <p>Seun Fakuade, appointed as the youngest executive council member (2022-2026), serves as Commissioner for Innovation, Science, and Digital Economy, a transformative leader propelling Ekiti State into the forefront of Nigeria’s digital revolution. With a formidable blend of expertise in development economics, public policy, and strategic governance, Seun is redefining progress by positioning Ekiti as a global beacon of innovation-driven prosperity. His mission: is to craft an eternal blueprint for States where ideas ignite, opportunities abound, and every citizen shapes a vibrant future.
+                .</p>
               <p class="text-gray-700 leading-relaxed">
-                I am Seun Fakuade, and I am excited to introduce myself to you.
-              </p>
+                Globally, Seun contributed to forward-thinking initiatives, including a 5-year Smart City Agenda for Chiang Mai, Thailand (2015–2016) and a reform-oriented policy to address Japan’s Juku system. These experiences cemented his reputation as a policy wonk and governance specialist with a global perspective.              </p>
               <p class="text-gray-700 leading-relaxed">
-                I am a passionate individual with a drive for success in all aspects of my life. I am from Nigeria, Oye in Ekiti State precisely. I have a strong work ethic and a determination to achieve my goals.
+                Appointed Special Adviser on Governance, Reforms, and Innovation to Governor Biodun Oyebanji, and later Commissioner, Seun has driven Ekiti’s ambitious digital agenda.
               </p>
-              <p class="text-gray-700 leading-relaxed">
-                I have a diverse educational background, with a Bachelor's degree in Microbiology and a Master's degree in Public Administration from the prestigious Lee Kuan Yew School of Public Policy. This combination has allowed me to gain a wide range of skills and a unique perspective on problem-solving. I am a lifelong learner, always seeking out new knowledge and ways to improve myself both personally and professionally.
-              </p>
-              <p class="text-gray-700 leading-relaxed">
-                Throughout my career, I have gained valuable experience in various industries, from various great mentors like Mallam Nasir El Rufai and Dr. John Kayode Fayemi.
-              </p>
-              <p class="text-gray-700 leading-relaxed">
-                I am a natural leader, with the ability to motivate and inspire those around me to strive for excellence. I believe in fostering a positive work environment where collaboration and teamwork are valued, leading to increased productivity and success.
-              </p>
-              <p class="text-gray-700 leading-relaxed">
-                In my free time, I enjoy traveling, exploring new cultures, and engaging in adventurous activities. These experiences have taught me the value of embracing new challenges and stepping out of my comfort zone.
-              </p>
+              
             </div>
-            <div>
-              <p class="italic text-orange-600">
-                Thank you for taking the time to read my introduction. I look forward to connecting with you!
-              </p>
+            <div class="mt-5">
+              <a href="/images/SEUN'S_BIOGRAPHY.pdf" 
+                 class="inline-flex items-center gap-2 px-6 py-3 bg-[#F97316] text-white rounded-lg hover:bg-[#E97316] transition-colors duration-300">
+                <i class="fas fa-arrow"></i>
+                Click here to read more
+              </a>
             </div>
           </div>
         </div>
@@ -94,8 +89,8 @@
   
   .book {
     position: relative;
-    width: 420px;
-    height: 600px;
+    width: 400px;
+    height: 500px;
     transform-style: preserve-3d;
     transition: transform 0.5s;
   }
@@ -217,13 +212,13 @@
     color: #F97316
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 458px) {
     .book {
       width: 300px;
       height: 400px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 468px) {
   .book-container {
     min-height: auto;
     padding: 20px;

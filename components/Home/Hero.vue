@@ -22,7 +22,7 @@
             class="space-y-8"
           >
             <h1 
-              class="relative text-9xl font-bold leading-none"
+              class="relative text-9xl sm:4xl xs:4xl font-bold leading-none"
               v-motion
               :initial="{ opacity: 0, x: -50 }"
               :enter="{ opacity: 1, x: 0, transition: { duration: 1000 } }"
@@ -38,13 +38,8 @@
                 
               </div>
             </h1>
-            <p class="text-gray-400 text-lg">A Leader Rooted in Vision, Guided by Values.</p>
-            <button class="group relative px-8 py-4 overflow-hidden">
-              <span class="relative z-10 text-white group-hover:text-black transition-colors duration-500">
-                Learn More
-              </span>
-              <div class="absolute inset-0 bg-orange-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
-            </button>
+            <p class="text-gray-400 text-lg xs-sm sm-sm">A Leader Rooted in Vision, Guided by Values.</p>
+           
           </div>
         </div>
        

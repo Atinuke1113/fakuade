@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen">
     <!-- Hero Section -->
-    <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section class="relative min-h-[70vh] flex items-center overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-r from-orange-50 to-teal-50"></div>
       <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center text-white"
@@ -137,9 +137,7 @@
               <p class="text-gray-600 mb-4">{{ story.description }}</p>
               <div class="flex justify-between items-center">
                 <span class="text-orange-500 font-semibold">{{ story.funding }}</span>
-                <button class="text-gray-600 hover:text-orange-500 transition-colors">
-                  Read More
-                </button>
+               
               </div>
             </div>
           </div>
@@ -176,8 +174,8 @@ const newPost = ref({
 const communityPosts = ref([
   {
     id: 1,
-    author: 'Sarah Chen',
-    authorAvatar: '/images/avatar1.jpg',
+    author: 'Usen RichGod',
+    authorAvatar: '/images/rich.jpg',
     content: 'Looking for co-founders for my AI-powered healthcare startup. Anyone interested in revolutionizing patient care?',
     tags: ['AI', 'Healthcare', 'Startup'],
     likes: 24,
@@ -185,8 +183,8 @@ const communityPosts = ref([
   },
   {
     id: 2,
-    author: 'Alex Thompson',
-    authorAvatar: '/images/avatar2.jpg',
+    author: 'Victor Tobi',
+    authorAvatar: '/images/tobi.jpg',
     content: 'Just secured our seed funding! Happy to share insights about our pitch deck and fundraising strategy.',
     tags: ['Funding', 'Success', 'Tips'],
     likes: 156,
@@ -196,22 +194,22 @@ const communityPosts = ref([
 
 const successStories = [
   {
-    company: 'TechFlow',
-    description: 'AI-powered workflow automation platform that raised $5M in seed funding.',
-    image: '/images/success1.jpg',
-    funding: '$5M Seed Round'
-  },
-  {
-    company: 'HealthConnect',
-    description: 'Revolutionary telehealth platform connecting patients with specialists.',
-    image: '/images/success2.jpg',
-    funding: '$3M Series A'
-  },
-  {
-    company: 'EcoCharge',
-    description: 'Sustainable charging solutions for electric vehicles.',
-    image: '/images/success3.jpg',
+    company: 'Atunbi',
+    description: 'Atunbi is revolutionalizing waste management in Ekiti State by incentivizing proper waste disposal, promoting recycling, and fostering sustainable practices. Congratulations to Sandra Odubela and Ojudamola Bankole for leading this impactful innovation and contributing to a cleaner environment.',
+    image: '/images/startup1.jpg',
     funding: '$2.5M Seed Round'
+  },
+  {
+    company: 'Poshfill',
+    description: 'Poshfill is innovating sustainability by transforming banana peels into eco-friendly polish for shoes, furniture, metal works, and more. Congratulations to Taiwo Tinuola and Fasanya Samuel Akinpelumi for driving this impactful, environmentally-conscious venture set to expand nationwide in the next three years.',
+    image: '/images/startup2.jpg',
+    funding: '$3M Seed Round'
+  },
+  {
+    company: 'Zendit Technology Limited',
+    description: 'Zendit is redefining logistics with its AI-powered app that connects users to affordable courier options, enabling same-day delivery while cutting delivery costs by up to 60%. Congratulations to Abiodun Falomo for driving this groundbreaking innovation and trasforming the logistics landscape.',
+    image: '/images/startup3.jpg',
+    funding: '$2M Seed Round'
   }
 ]
 

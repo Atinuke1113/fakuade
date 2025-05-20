@@ -95,10 +95,10 @@
               </NuxtLink>
             </div>
   
-            <div class="grid grid-cols-2 gap-8 px-6">
+            <div class="grid grid-cols-2 gap-4 px-4">
               <div v-for="service in services" 
                    :key="service.title" 
-                   class="flex items-start gap-4">
+                   class="flex items-start gap-2">
                 <div class="w-10 h-10 flex-shrink-0">
                   <i :class="service.icon" class="text-[#F97316] text-2xl"></i>
                 </div>
@@ -150,10 +150,6 @@
         </div>
       </div>
   
-      <!-- Animated Particles -->
-      <div class="particles">
-        <div v-for="n in 20" :key="n" class="particle"></div>
-      </div>
     </section>
   </template>
   
@@ -161,18 +157,19 @@
   const services = [
     {
       title: 'VISIONARY',
-      description: 'He is not just a leader — he is a visionary. Guided by purpose and powered by innovation',
       icon: 'fas fa-eye'
     },
     {
-      title: 'LEADERSHIP',
-      description: 'He leads with conviction, clarity, and a deep commitment to public service',
+      title: 'TRANSFORMATIONAL LEADER',
       icon: 'fas fa-male'
     },
     {
-      title: 'INNOVATION',
-      description: 'He embodies innovation — not just in technology, but in thinking, governance, and leadership',
+      title: 'INNOVATOR',
       icon: 'fas fa-globe'
+    },
+    {
+      title: 'POLICY WORK',
+      icon: 'fas fa-briefcase'
     }
   ]
   </script>

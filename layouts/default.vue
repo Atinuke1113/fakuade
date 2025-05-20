@@ -177,15 +177,15 @@
             <ul class="space-y-2 text-sm md:text-base text-gray-400">
               <li class="flex items-center gap-2">
                 <i class="fas fa-map-marker-alt text-orange-500"></i>
-                Kingston, Ontario
+               Phase 1, Adeyeye Ibidunmoye Building, Ekiti State Government Secretariat, Ado Ekiti.
               </li>
               <li class="flex items-center gap-2">
                 <i class="fas fa-phone text-orange-500"></i>
-                +1 234 567 8900
+                On Request
               </li>
               <li class="flex items-center gap-2">
                 <i class="fas fa-envelope text-orange-500"></i>
-                contact@example.com
+                seunfakuade@fakuade.com
               </li>
             </ul>
           </div>
@@ -218,7 +218,7 @@ const menuItems = ref([
   },
   {
     name: 'Initiatives',
-    path: '',
+    path: 'initiatives',
     subItems: [
       {
         name: 'Scholarship Program',
@@ -233,24 +233,14 @@ const menuItems = ref([
         description: 'Empowering youth with modern digital and technological skills'
       },
       
-      {
-        name: 'Leadership Academy',
-        path: '/leadership',
-        icon: 'fas fa-users',
-        description: 'Developing the next generation of community leaders'
-      },
+     
       {
         name: 'Tech Startups',
         path: '/techstartup',
         icon: 'fas fa-rocket',
         description: 'Supporting and incubating innovative technology startups'
       },
-      {
-        name: 'Community Projects',
-        path: '/community',
-        icon: 'fas fa-hands-helping',
-        description: 'Initiatives that directly impact and improve our local communities'
-      }
+      
     ]
   },
   {

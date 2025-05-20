@@ -30,7 +30,7 @@
               <p class="text-gray-600 mb-6">
                 Detailed profile including education, career milestones, and leadership philosophy
               </p>
-              <a href="/downloads/seun-fakuade-biography.pdf" 
+              <a href="/images/SEUN'S_BIOGRAPHY.pdf" 
                  class="inline-flex items-center gap-2 px-6 py-3 bg-[#F97316] text-white rounded-lg hover:bg-[#E97316] transition-colors duration-300">
                 <i class="fas fa-download"></i>
                 Download Biography

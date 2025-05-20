@@ -33,7 +33,7 @@
                     </div>
                     <div>
                       <h3 class="font-semibold text-lg">Address</h3>
-                      <p class="text-gray-600">Governor's Office, Ado-Ekiti, Ekiti State.</p>
+                      <p class="text-gray-600"> Phase 1, Adeyeye Ibidunmoye Building, Ekiti State Government Secretariat, Ado Ekiti.</p>
                     </div>
                   </div>
   
